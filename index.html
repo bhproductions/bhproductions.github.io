@@ -31,7 +31,7 @@
         font-size: 36px;
         font-weight: bold;
         text-align: center;
-        font-family: monospace;
+        font-family: 'Courier New';
         margin-top: 10px; /* Aggiunge un margine superiore di 30px al titolo */
         animation: slideIn 1s ease-in-out; /* Aggiunge l'animazione slideIn */
       }
@@ -58,6 +58,23 @@
           opacity: 1;
         }
       }
+      #logo-container {
+        display: flex;
+        align-items: left;
+        margin-top: 120px;
+    }
+
+    #logo-container img {
+        height: 50px;
+        margin-right: 40px;
+    }
+
+    #logo-text {
+        color: gray;
+        font-size: 20px;
+        font-family: 'Courier New';
+    }
+
     </style>
   </head>
   <body>
@@ -68,8 +85,14 @@
       <a href="#" id="right">About</a>
       <a href="#" id="right">Support Us</a>
     </div>
-    <h1 id="title">BH Productions
-      
+    <h1 id="title">BH Productions</h1>
+        <div id="logo-container">
+            
+            <img src="ImageHome.jpg">
+            <h1 id="logo-text" style="font-family: 'Courier New', Courier, monospace;">Testo accanto all'immagine</h1>
+           
+        </div>
+           
     </h1>
   </body>
 </html>
