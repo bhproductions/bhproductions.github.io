@@ -48,7 +48,14 @@
           opacity: 1;
         }
       }
-      
+      @keyframes ImgSlide {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
       #title p {
         animation: fade 1s infinite;
       }
@@ -69,7 +76,7 @@
     #logo-container img {
         height: 350px;
         margin-right: 40px;
-        animation: slideIn 1s ease-in-out;
+        animation: ImgSlide 1s ease-in-out;
     }
 
     #logo-text {
