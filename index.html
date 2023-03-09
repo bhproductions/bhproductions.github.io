@@ -33,7 +33,18 @@
         text-align: center;
         font-family: monospace;
         margin-top: 10px; /* Aggiunge un margine superiore di 30px al titolo */
+        animation: slideIn 1s ease-in-out; /* Aggiunge l'animazione slideIn */
       }
+  /* Definisce l'animazione slideIn */
+      @keyframes slideIn {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      
       #title p {
         animation: fade 1s infinite;
       }
