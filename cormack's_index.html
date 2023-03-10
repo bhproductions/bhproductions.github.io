@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        window.addEventListener('scroll', function() {
+        var scrollY = window.scrollY;
+        var pageContent = document.querySelector('.page-content');
+        pageContent.style.marginTop = '-' + scrollY + 'px';
+        });
+    </script>
+  <head>
+    <title>BH</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        font-family: 'Courier New';
+        margin: 0;
+      }
+      .bg {
+      background-image: url('bg.png');
+      background-size: cover;
+      height: 100vh;
+    }
+    header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    }
+    .page-content {
+    margin-top: 100vh;
+    }
+      /* Style the logo */
+      #logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+      #logo img {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+      }
+      /* Style the menu container */
+      #menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* Style the menu links */
+      #menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 10px;
+        padding: 10px 0;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+      }
+      /* Add an underline to the menu links on hover */
+      #menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-in-out;
+      }
+      #menu a:hover {
+        color: #c9c9c9;
+      }
+      #menu a:hover::after {
+        transform: scaleX(1);
+      }
+      /* Add responsive styles */
+      @media only screen and (max-width: 600px) {
+        #logo {
+          font-size: 20px;
+        }
+        #menu a {
+          font-size: 14px;
+          margin: 0 5px;
+          padding: 8px 0;
+        }
+      }
+      
+      /* Style the content section */
+      #content {
+        padding: 20px;
+        color: white;
+      }
+      
+      /* Style the headings */
+      h1, h2, h3, h4, h5, h6 {
+        color: white;
+        margin-top: 0;
+      }
+      
+      /* Style the paragraphs */
+      p {
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
+      /* Style the wrapper container */
+      .wrapper {
+        background-color: #262626;
+width: 90%;
+max-width: 1000px;
+margin: 0 auto;
+padding: 20px;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+  /* Style the footer section */
+  #footer {
+    background-color: #0d0d1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.3);
+  }
+</style>
+  </head>
+  <body>
+    <header>
+      <div id="menu">
+        <a href="#">
+            <div id="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+        </a>
+        <a href="#">Games & Apps</a>
+        <a href="#">Developer tools</a>
+        <a href="#">Coming soon</a>
+        <a href="#">Contact us</a>
+        <a href="#">About</a>
+        <a href="#">Support us</a>
+      </div>
+    </header>
+    <div class="bg"></div>
+    <div id="page-content">
+      <div class="wrapper">
+        <h1>Welcome to BH</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa quis nulla vehicula commodo. Praesent dignissim justo sit amet enim tristique vehicula. Etiam bibendum auctor mauris, a egestas nunc accumsan ac. Morbi convallis ipsum magna, ac commodo nibh eleifend quis. Aliquam feugiat rutrum nibh, vel blandit quam finibus sed. Duis vel pharetra risus, in pretium velit. Integer condimentum imperdiet bibendum.</p>
+        <h2>Our Services</h2>
+        <p>Nullam gravida, quam vel sodales dignissim, mi nisi luctus quam, ut posuere risus nibh vel orci. Praesent et tellus vitae tellus ullamcorper pretium at eu ipsum. Sed vitae sapien euismod, placerat lorem eu, iaculis nisl. Nulla interdum congue magna ac malesuada. Donec sed felis eget purus dignissim gravida. Etiam dignissim tortor sapien, eu dictum erat lobortis eget. Sed ac risus sed augue hendrerit scelerisque in vitae mi. Ut eget ullamcorper odio. Nulla facilisi.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>&copy; 2023 BH. All rights reserved.</p>
+    </div>
+  </body>
+</html>
