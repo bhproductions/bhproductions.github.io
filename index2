@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >BH</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        font-family: 'Courier New',
+      }
+      #header {
+        background-color: #0d0d1a;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; /* Aggiunge un margine inferiore di 10px al rettangolo */
+        text-align: center;
+      }
+      #header a {
+        color: white;
+        margin-right: 100px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      #header a:hover {
+        color: gray;
+      }
+      
+      #title {
+        color: white;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Courier New';
+        margin-top: 10px; /* Aggiunge un margine superiore di 30px al titolo */
+        animation: slideIn 1s ease-in-out; /* Aggiunge l'animazione slideIn */
+      }
+  /* Definisce l'animazione slideIn */
+      @keyframes slideIn {
+        from {
+          transform: translateY(100%);
+          color: gray;
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          color: white;
+          opacity: 1;
+        }
+      }
+      @keyframes ImgSlide {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      #title p {
+        animation: fade 1s infinite;
+      }
+      @keyframes fade {
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      #logo-container {
+        display: flex;
+        align-items: left;
+        margin-top: 120px;
+    }
+
+    #logo-container img {
+        height: 350px;
+        margin-right: 40px;
+        animation: ImgSlide 1s ease-in-out;
+    }
+
+    #logo-text {
+        color: gray;
+        font-size: 15px;
+        font-family: 'Courier New';
+        animation: ImgSlide 1s ease-in-out;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <a href="Games&Apps.html" id="left">Games & apps</a>
+      <a href="#" id="left">Developer tools</a>
+      <a href="https://bhproductions.github.io/" id="mid">Home</a>
+      <a href="#" id="right">Coming soon</a>
+      <a href="#" id="right">About</a>
+      <a href="#" id="right">Support us</a>
+    </div>
+    
+      </body>
+</html>
