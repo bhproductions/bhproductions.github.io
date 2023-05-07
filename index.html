@@ -1,102 +1,168 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title >BH</title>
-    <style>
-      body {
-        background-color: #1a1a2e;
-        font-family: 'Courier New',
-      }
-      #header {
-        background-color: #0d0d1a;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px; /* Aggiunge un margine inferiore di 10px al rettangolo */
-        text-align: center;
-      }
-      #header a {
-        color: white;
-        margin-right: 100px;
-        text-decoration: none;
-        font-size: 20px;
-      }
-      #header a:hover {
-        color: gray;
-      }
-      
-      #title {
-        color: white;
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-        font-family: 'Courier New';
-        margin-top: 10px; /* Aggiunge un margine superiore di 30px al titolo */
-        animation: slideIn 1s ease-in-out; /* Aggiunge l'animazione slideIn */
-      }
-  /* Definisce l'animazione slideIn */
-      @keyframes slideIn {
-        from {
-          transform: translateY(100%);
-          color: gray;
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          color: white;
-          opacity: 1;
-        }
-      }
-      @keyframes ImgSlide {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      #title p {
-        animation: fade 1s infinite;
-      }
-      @keyframes fade {
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      #logo-container {
-        display: flex;
-        align-items: left;
-        margin-top: 120px;
-    }
+<head>
+	<title>BH</title>
+	<style>
+		body {
+			background-color: #1a1a2e;
+		}
+		#welcome-text {
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #ddf2ff;
+   font-size: 24px;
+   font-weight: bold;
+   font-family: sans-serif;
+   text-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   animation: fade-in 3s ease-out forwards;
+}
+#welcome-text2 {
+   position: absolute;
+   top: 60%;
+   left: 40%;
+   transform: translate(-50%, -50%);
+   color: #a3aaad;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: sans-serif;
+   text-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   animation: fade-in 3s ease-out forwards;
+}
+#welcome-text2 a:hover {
+			color: gold;
+		}
 
-    #logo-container img {
-        height: 350px;
-        margin-right: 40px;
-        animation: ImgSlide 1s ease-in-out;
-    }
+		#rectangle {
+			position: relative;
+			width: 100%;
+			height: 50px;
+			background-color: rgb(40, 34, 75);
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			animation: fade-in 1s ease-out forwards;
+		}
+		
+		#text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #ddf2ff;
+			font-size: 24px;
+			font-weight: bold;
+			font-family: sans-serif;
+			text-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			animation: fade-in 3s ease-out forwards;
+		}
+		
+		@keyframes fade-in {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
 
-    #logo-text {
-        color: gray;
-        font-size: 15px;
-        font-family: 'Courier New';
-        animation: ImgSlide 1s ease-in-out;
-    }
+		#left-links {
+			position: absolute;
+			top: 50%;
+			left: 100px;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		#left-links a {
+			font-family: sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			color: #ddf2ff;
+			margin-right: 20px;
+			text-decoration: none;
+			opacity: 0.2;
+            font-size: 19px;
+			transition: opacity 0.5s ease;
+		}
+		
+		#left-links a:hover {
+			opacity: 0.7;
+            color: gold;
+		}
 
-    </style>
-  </head>
-  <body>
-    <div id="header">
-      <a href="Games&Apps.html" id="left">Games & apps</a>
-      <a href="#" id="left">Developer tools</a>
-      <a href="https://bhproductions.github.io/" id="mid">Home</a>
-      <a href="#" id="right">Coming soon</a>
-      <a href="#" id="right">About</a>
-      <a href="#" id="right">Support us</a>
-    </div>
-    
-      </body>
+		#right-links {
+			position: absolute;
+			top: 50%;
+			right: 100px;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+            
+		}
+		
+		#right-links a {
+			font-family: sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			color: #ddf2ff;
+			margin-left: 20px;
+			text-decoration: none;
+			opacity: 0.2;
+			transition: opacity 0.5s ease;
+            font-size: 20px
+		}
+		
+		#right-links a:hover {
+			opacity: 0.7;
+			color: gold;
+		}
+		
+		#left-links a:nth-child(1),
+		#left-links a:nth-child(2),
+		#left-links a:nth-child(3),
+		#right-links a:nth-child(1),
+		#right-links a:nth-child(2),
+		#right-links a:nth-child(3) {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+        #square {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: rgb(40, 34, 75);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 540px;
+            animation: fade-in 3s ease-out forwards;
+        }
+
+	</style>
+</head>
+<body>
+	<div id="rectangle">
+        <div id="text">BH</div>
+        <div id="left-links">
+          <a href="#">Games & Apps</a>
+          <a href="#">Developer Tools</a>
+          <a href="#">Coming Soon</a>
+        </div>     
+        <div id="right-links">
+          <a href="#">Contact Us</a>
+          <a href="#">About Us</a>
+          <a href="#">Support Us</a>
+        </div>
+      </div>
+       <div id="square">
+          <div id="welcome-text">Welcome To BH</div>
+          <div id="welcome-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo massa quis nulla vehicula commodo. Praesent dignissim justo sit amet enim tristique vehicula. Etiam bibendum auctor mauris, a egestas nunc accumsan ac. Morbi convallis ipsum magna, ac commodo nibh eleifend quis. Aliquam feugiat rutrum nibh, vel blandit quam finibus sed. Duis vel pharetra risus, in pretium velit. Integer condimentum imperdiet bibendum.</div>
+       </div>
+
+</body>
 </html>
